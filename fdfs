@@ -1,0 +1,11 @@
+FDFS操作指令：
+ 安装 ./make.sh && ./make.sh install
+ 查看启动脚本：ll /etc/init.d/ | grep fdfs
+ 查看到以下配置文件模板：cd /etc/fdfs/
+ 复制并重命名：mv
+ 将配置中的/usr/local改为/usr   :%s+/usr/local/+/usr/+g
+
+在nginx中配置fastDFS模块：
+    ./configure --prefix=/opt/nginx --sbin-path=/usr/bin/nginx/ --add-module=/home/leyou/fdfs/fastdfs-nginx-module/src
+备份：mv /usr/bin/nginx /usr/bin/nginx-bck
+替换nginx: cp /home/leyou/nginx-1.10.0/objs/nginx /usr/bin/

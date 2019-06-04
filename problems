@@ -1,0 +1,17 @@
+1.网关的路由规则
+zuul:
+  routes:
+    user-service: # 这里是路由id，随意写
+      path: /user-service/** # 这里是映射路径
+      url: http://127.0.0.1:8081 # 映射路径对应的实际url地址
+  我们将 `/user-service/**`开头的请求，代理到http://127.0.0.1:8081
+
+2.配置类的作用：
+3.热部署
+4.@Primary属性的作用
+  @Transient
+5.表的水平拆分，垂直拆分
+  spu与sku一对多的关系
+
+
+

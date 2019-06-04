@@ -1,0 +1,62 @@
+1.idea常用快捷键：
+    https://jingyan.baidu.com/article/29697b9163ac7dab20de3cbf.html
+    Ctrl+N 按名字搜索类
+    Ctrl+H 查看类的继承关系 查看子类
+    Ctrl+Alt+B 查看子类方法实现
+    Alt+F7 查找类或方法在哪被使用
+2.断点调式总结
+    https://www.cnblogs.com/yjd_hycf_space/p/7483471.html
+3.Request Payload 怎么发？
+4.nginx常用指令
+  a.在安装目录下，使用nginx命令启动NGINX
+  b.停止：nginx -s stop
+  c.重新加载：nginx -s reload
+
+  linux查看防火墙状态及开启关闭命令（转）
+  一、service方式
+  查看防火墙状态：
+  [root@centos6 ~]# service iptables status
+  可以使用命令设置防火墙：
+  a. 永久性生效
+    开启：chkconfig iptables on
+    关闭：chkconfig iptables off
+  b. 即时生效，重启后失效
+     开启：service iptables start
+     关闭：service iptables stop
+  netstat -ntlp
+  nginx在linux上的安装，以及依赖的安装：https://blog.csdn.net/yxflovegs2012/article/details/53482324
+--------------------------------------------------------------------------------------------------
+  1、修改vim /etc/sysconfig/iptables文件，增加如下一行：
+  　　-A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 要开启的端口 -j ACCEPT
+  2、重启    iptables
+      命令：  service iptables restart
+ 提示警告：Spring Boot Configuration Annotation Processor not found in classpath
+         打开小扳手，关闭提示
+ 3.路径占位符 @PathVariable("cid")
+      @GetMapping("groups/{cid}")
+      public ResponseEntity<List<SpecGroup>> queryGroupByCid(@PathVariable("cid") long cid){
+          return null;
+      }
+
+-------------------------------------------------------------------------------------------
+2019年5月17日
+1. @KeySql(useGeneratedKeys = true)
+  获得当前插入的数据的id，重点：当前插入数据
+  @RegisterMapper//使mapper生效
+2.vue的升级，直接修改版本号
+3.lamba表达式
+4.在IDEA中可以使用快捷键返回，默认是ctrl+alt+方向键
+
+2019年5月21日
+1.postman数组参数的传递
+  http://localhost:6081/category/list/ids?ids=76,77
+
+  erlang语言环境下载地址
+  https://packages.erlang-solutions.com/rpm/centos/6/x86_64/
+ cookie不能跨域
+ 每一个请求就是一个线程
+ map存数put(k,v);
+ * stream流式处理
+
+ 2019年6月3日
+ 内网穿透：https://natapp.cn

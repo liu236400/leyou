@@ -1,0 +1,33 @@
+server:
+  port: 6081
+spring:
+  application:
+    name: item-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/leyou02
+    username: root
+    password: 123456
+  rabbitmq:
+      host: 192.168.25.130
+      username: leyou
+      password: leyou
+      virtual-host: /leyou
+      template:
+        retry:
+          enabled: true #
+          initial-interval: 10000ms #初始化重试周期，失败之后自动重试
+          max-interval: 30000ms #最大重试周期
+          multiplier: 2 #重试时间倍数
+        exchange: ly.item.exchange
+      publisher-confirms: true #生产者确认
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.199:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1 #保证拿到的是ip而不是localhost
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
