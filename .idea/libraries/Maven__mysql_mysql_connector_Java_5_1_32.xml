@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Maven: mysql:mysql-connector-Java:5.1.32">
+  <library name="Maven: mysql:mysql-connector-java:5.1.32">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-Java/5.1.32/mysql-connector-java-5.1.32.jar!/" />
     </CLASSES>
